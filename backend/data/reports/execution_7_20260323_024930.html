@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>接口测试报告 - test</title>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: #f0f2f5; color: #333; padding: 24px; }
+    .container { max-width: 960px; margin: 0 auto; }
+    .header { background: linear-gradient(135deg, #1890ff 0%, #096dd9 100%); color: #fff; padding: 32px; border-radius: 8px 8px 0 0; }
+    .header h1 { font-size: 24px; margin-bottom: 12px; }
+    .header .meta { font-size: 14px; opacity: 0.9; line-height: 1.8; }
+    .summary { display: flex; gap: 16px; padding: 20px 32px; background: #fff; border-bottom: 1px solid #f0f0f0; flex-wrap: wrap; }
+    .stat-card { flex: 1; min-width: 120px; text-align: center; padding: 16px; border-radius: 6px; background: #fafafa; }
+    .stat-card .value { font-size: 28px; font-weight: 700; }
+    .stat-card .label { font-size: 12px; color: #999; margin-top: 4px; }
+    .section { background: #fff; padding: 24px 32px; border-bottom: 1px solid #f0f0f0; }
+    .section:last-child { border-radius: 0 0 8px 8px; border-bottom: none; }
+    h2 { font-size: 18px; margin-bottom: 16px; color: #1890ff; }
+    table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    th, td { padding: 10px 12px; text-align: left; border-bottom: 1px solid #f0f0f0; }
+    th { background: #fafafa; font-weight: 600; color: #666; }
+    tr:hover { background: #fafafa; }
+    code { background: #f5f5f5; padding: 2px 6px; border-radius: 3px; font-size: 12px; }
+    .inner-table { margin-top: 6px; font-size: 12px; }
+    .inner-table th, .inner-table td { padding: 4px 8px; }
+    .footer { text-align: center; padding: 16px; color: #999; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>接口测试执行报告</h1>
+        <div class="meta">
+            <div>任务名称: test</div>
+            <div>执行时间: 2026-03-23 02:49:30 UTC</div>
+            <div>目标环境: https://test.xhey.top</div>
+        </div>
+    </div>
+
+    <div class="summary">
+        <div class="stat-card">
+            <div class="value" style="color:#333">8</div>
+            <div class="label">总用例</div>
+        </div>
+        <div class="stat-card">
+            <div class="value" style="color:#52c41a">4</div>
+            <div class="label">通过</div>
+        </div>
+        <div class="stat-card">
+            <div class="value" style="color:#ff4d4f">4</div>
+            <div class="label">失败</div>
+        </div>
+        <div class="stat-card">
+            <div class="value" style="color:#faad14">0</div>
+            <div class="label">跳过</div>
+        </div>
+        <div class="stat-card">
+            <div class="value" style="color:#1890ff">50.0%</div>
+            <div class="label">通过率</div>
+        </div>
+        <div class="stat-card">
+            <div class="value" style="color:#666">4.72s</div>
+            <div class="label">总耗时</div>
+        </div>
+    </div>
+
+    
+            <div class="section">
+                <h2>失败用例详情</h2>
+                <table>
+                    <tr><th>#</th><th>用例名称</th><th>请求</th><th>状态码</th><th>耗时(ms)</th><th>详情</th></tr>
+                    <tr>
+                    <td>1</td>
+                    <td>test_case_002_missing_openday</td>
+                    <td><code></code></td>
+                    <td>-</td>
+                    <td>0</td>
+                    <td><div style="margin-top:8px;color:#ff4d4f"><strong>错误:</strong> AssertionError: 缺少 openday 应返回错误，实际 code=200, msg=success
+assert (200 != 200 or &#x27;success&#x27; != &#x27;success&#x27;)
+ +  where 200 = &lt;built-in method get of dict object at 0x10746f480&gt;(&#x27;code&#x27;)
+ +    where &lt;built-in method get of dict object at 0x10746f480&gt; = {&#x27;code&#x27;: 200, &#x27;data&#x27;: {&#x27;msg&#x27;: &#x27;&#x27;, &#x27;status&#x27;: 0}, &#x27;msg&#x27;: &#x27;success&#x27;, &#x27;toast_msg&#x27;: &#x27;&#x27;}.get
+ +  and   &#x27;success&#x27; = &lt;built-in method get of dict object at 0x10746f480&gt;(&#x27;msg&#x27;)
+ +    where &lt;built-in method get of dict object at 0x10746f480&gt; = {&#x27;code&#x27;: 200, &#x27;data&#x27;: {&#x27;msg&#x27;: &#x27;&#x27;, &#x27;status&#x27;: 0}, &#x27;msg&#x27;: &#x27;success&#x27;, &#x27;toast_msg&#x27;: &#x27;&#x27;}.get</div></td>
+                </tr><tr>
+                    <td>2</td>
+                    <td>test_case_003_missing_watermarkcount</td>
+                    <td><code></code></td>
+                    <td>-</td>
+                    <td>0</td>
+                    <td><div style="margin-top:8px;color:#ff4d4f"><strong>错误:</strong> AssertionError: 缺少 watermarkCount 应返回错误，实际 code=200, msg=success
+assert (200 != 200 or &#x27;success&#x27; != &#x27;success&#x27;)
+ +  where 200 = &lt;built-in method get of dict object at 0x1074ee280&gt;(&#x27;code&#x27;)
+ +    where &lt;built-in method get of dict object at 0x1074ee280&gt; = {&#x27;code&#x27;: 200, &#x27;data&#x27;: {&#x27;msg&#x27;: &#x27;&#x27;, &#x27;status&#x27;: 0}, &#x27;msg&#x27;: &#x27;success&#x27;, &#x27;toast_msg&#x27;: &#x27;&#x27;}.get
+ +  and   &#x27;success&#x27; = &lt;built-in method get of dict object at 0x1074ee280&gt;(&#x27;msg&#x27;)
+ +    where &lt;built-in method get of dict object at 0x1074ee280&gt; = {&#x27;code&#x27;: 200, &#x27;data&#x27;: {&#x27;msg&#x27;: &#x27;&#x27;, &#x27;status&#x27;: 0}, &#x27;msg&#x27;: &#x27;success&#x27;, &#x27;toast_msg&#x27;: &#x27;&#x27;}.get</div></td>
+                </tr><tr>
+                    <td>3</td>
+                    <td>test_case_007_no_authorization</td>
+                    <td><code></code></td>
+                    <td>-</td>
+                    <td>0</td>
+                    <td><div style="margin-top:8px;color:#ff4d4f"><strong>错误:</strong> AssertionError: 未携带 Authorization 应返回鉴权错误，实际 status=200, code=200
+assert False</div></td>
+                </tr><tr>
+                    <td>4</td>
+                    <td>test_case_008_invalid_authorization</td>
+                    <td><code></code></td>
+                    <td>-</td>
+                    <td>0</td>
+                    <td><div style="margin-top:8px;color:#ff4d4f"><strong>错误:</strong> AssertionError: 无效 Authorization 应返回鉴权错误，实际 status=200, code=200
+assert False</div></td>
+                </tr>
+                </table>
+            </div>
+
+    <div class="section">
+        <h2>全部用例结果</h2>
+        <table>
+            <tr><th>#</th><th>用例名称</th><th>状态</th><th>耗时(ms)</th></tr>
+            <tr>
+                <td>1</td>
+                <td>test_case_001_send_vip_success</td>
+                <td><span style="color:#52c41a;font-weight:bold">通过</span></td>
+                <td>0</td>
+            </tr><tr>
+                <td>2</td>
+                <td>test_case_002_missing_openday</td>
+                <td><span style="color:#ff4d4f;font-weight:bold">失败</span></td>
+                <td>0</td>
+            </tr><tr>
+                <td>3</td>
+                <td>test_case_003_missing_watermarkcount</td>
+                <td><span style="color:#ff4d4f;font-weight:bold">失败</span></td>
+                <td>0</td>
+            </tr><tr>
+                <td>4</td>
+                <td>test_case_004_missing_sourcedetail</td>
+                <td><span style="color:#52c41a;font-weight:bold">通过</span></td>
+                <td>0</td>
+            </tr><tr>
+                <td>5</td>
+                <td>test_case_005_sourcedetail_empty_string</td>
+                <td><span style="color:#52c41a;font-weight:bold">通过</span></td>
+                <td>0</td>
+            </tr><tr>
+                <td>6</td>
+                <td>test_case_006_openday_string_type</td>
+                <td><span style="color:#52c41a;font-weight:bold">通过</span></td>
+                <td>0</td>
+            </tr><tr>
+                <td>7</td>
+                <td>test_case_007_no_authorization</td>
+                <td><span style="color:#ff4d4f;font-weight:bold">失败</span></td>
+                <td>0</td>
+            </tr><tr>
+                <td>8</td>
+                <td>test_case_008_invalid_authorization</td>
+                <td><span style="color:#ff4d4f;font-weight:bold">失败</span></td>
+                <td>0</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="footer">
+        QA Master 自动生成 | 2026-03-23 02:49:30
+    </div>
+</div>
+</body>
+</html>

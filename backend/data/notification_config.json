@@ -1,0 +1,5 @@
+{
+  "dingtalk_webhook_url": "https://oapi.dingtalk.com/robot/send?access_token=c66252525e724f4dd04abd6c375e84e9d33d7fafdc73cbaf69cf4db86b358950",
+  "dingtalk_webhook_secret": "SECb0f5f1d344d1b6fba22e76f7ab53895c0d35c9eee5202006ad9d119887605ff0",
+  "enabled": true
+}
